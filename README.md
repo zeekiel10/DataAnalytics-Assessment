@@ -11,6 +11,11 @@ I had to get my month_yr first using DATE_FORMAT to group each customer's transa
 Then I calculated their average number of monthly transactions, which helped in classifying them into frequency buckets (Low, Medium, or High).
 Finally, I grouped the customers by these frequency categories, counted how many fall into each, and computed the average transaction rate for each group.
 
+Question 3: **Find all active accounts (savings or investments) with no transactions in the last 1 year (365 days)** 
+I started by looking at all the savings and investment plans from the plans table — only the ones marked as either a regular savings or an investment plan. For each plan, I wanted to find the most recent transaction where money was successfully added to that plan. So, I checked the transactions table for successful deposits linked to each plan and picked the latest date for each.
+Next, I compared today’s date with that most recent transaction date to see how long it’s been since the user last put money into their plan. If a plan never had a successful transaction, I used the plan’s start date as the reference point instead.
+Finally, I filtered the results to show only those plans where it’s been more than 365 days (a year) since the last deposit or the plan started. This way, I could highlight accounts that have been inactive for a long time.The output includes each plan’s ID, the owner, the type (Savings or Investment), the date of the last transaction, and the number of inactive days.
+
 **Question 4: For each customer, assuming the profit_per_transaction is 0.1% of the transaction value, calculate:**
 I started by calculating the tenure of each customer in months using the TIMESTAMPDIFF function between their signup date (date_joined) and today (CURDATE()). This helps normalize transaction activity across users who've been active for different durations.
 
