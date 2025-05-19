@@ -26,4 +26,6 @@ Finally, I applied the CLV formula:
 
 To make the results meaningful, I filtered only successful transactions, grouped everything by customer, and sorted by CLV to highlight the most valuable users.
 
+Challenges
 
+Several challenges arose while working with the data. I mostly lost connection while running the script, and I also encountered null values due to the functions I used. Fortunately, thanks to ChatGPT, I was able to get help with Question 3 and resolve some of my problems. This task was quite challenging; I was even stuck on one question for 10 hours. Despite the difficulty, I am thankful to the team for giving us this task, as it encouraged me to step outside my comfort zone and research how to get the job done.
